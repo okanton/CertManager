@@ -18,7 +18,7 @@ namespace Сerts
         public CertsUsersEntities()
             : base("name=CertsUsersEntities")
         {
-            this.Database.Connection.ConnectionString = @"Data Source=prm-tr01;Initial Catalog=CertsUsers;Persist Security Info=True;User ID=CertsUsersAdmin;Password=AdminOfCertsUsers";
+            this.Database.Connection.ConnectionString = @"Data Source=prm-ad01-tr04;Initial Catalog=CertManagerUsers;Persist Security Info=True;User ID=CertsUsersAdmin;Password=AdminOfCertsUsers";
         }
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

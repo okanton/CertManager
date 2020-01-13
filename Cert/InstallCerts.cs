@@ -12,7 +12,7 @@ namespace Сerts
         static System.Timers.Timer aTimer;
 
         CheckBox chkbox = new CheckBox();
-        
+
         public InstallCerts()
         {
             InitializeComponent();
@@ -71,14 +71,14 @@ namespace Сerts
         private void btnGetCertsList_Click(object sender, EventArgs e)
         {
             Cursor = Cursors.WaitCursor;
-             
+
             dataGridViewCertsList.Columns.Clear();
             FQCN = CryptoHelper.GetContainerNames();
 
-            if (FQCN!= null)
+            if (FQCN != null)
             {
-                
-                dataGridViewCertsList.DataSource = DataGridViewHelper.FillDataTable(providerType,providerName,FQCN);
+
+                dataGridViewCertsList.DataSource = DataGridViewHelper.FillDataTable(providerType, providerName, FQCN);
 
                 DataGridViewHelper.AddDataGridViewColumns(dataGridViewCertsList);
                 DataGridViewHelper.AddDataGridViewCheckBoxColumn(dataGridViewCertsList);

@@ -1,5 +1,4 @@
-﻿using System.IO;
-using System.Security.Cryptography.X509Certificates;
+﻿using System.Security.Cryptography.X509Certificates;
 
 namespace Сerts
 {
@@ -42,12 +41,12 @@ namespace Сerts
         /// <returns></returns>
         static string GetNameCompany(string company)
         {
-            if (company.Contains("6315376946") && !company.Contains("VOLGSTGK"))    return @"ООО ""Тензор""";
-            if (company.Contains("SUNVETER"))                                       return @"АО ""Солнечный ветер""";
-            if (company.Contains("VOLGSTGK"))                                       return @"ПАО ""Т Плюс""";
-            if (company.Contains("VORKUTTC"))                                       return @"ООО ""Воркутинские ТЭЦ""";
-            if (company.Contains("CHIMPROM"))                                       return @"ПАО ""Химпром""";
-            if (company.Contains("Гарант"))                                         return @"ООО ""ЕЭС-Гарант""";
+            if (company.Contains("6315376946") && !company.Contains("VOLGSTGK")) return @"ООО ""Тензор""";
+            if (company.Contains("SUNVETER")) return @"АО ""Солнечный ветер""";
+            if (company.Contains("VOLGSTGK")) return @"ПАО ""Т Плюс""";
+            if (company.Contains("VORKUTTC")) return @"ООО ""Воркутинские ТЭЦ""";
+            if (company.Contains("CHIMPROM")) return @"ПАО ""Химпром""";
+            if (company.Contains("Гарант")) return @"ООО ""ЕЭС-Гарант""";
             return company;
         }
 
@@ -59,12 +58,12 @@ namespace Сerts
         /// <returns></returns>
         static string GetShortNameCompany(string company)
         {
-            if (company.Contains("6315376946") && !company.Contains("VOLGSTGK"))     return @"Тензор";
-            if (company.Contains("SUNVETER"))                                        return @"СВ";
-            if (company.Contains("VOLGSTGK"))                                        return @"Т+";
-            if (company.Contains("VORKUTTC"))                                        return @"ВТ";
-            if (company.Contains("CHIMPROM"))                                        return @"ХП";
-            if (company.Contains("Гарант"))                                          return @"Гарант";
+            if (company.Contains("6315376946") && !company.Contains("VOLGSTGK")) return @"Тензор";
+            if (company.Contains("SUNVETER")) return @"СВ";
+            if (company.Contains("VOLGSTGK")) return @"Т+";
+            if (company.Contains("VORKUTTC")) return @"ВТ";
+            if (company.Contains("CHIMPROM")) return @"ХП";
+            if (company.Contains("Гарант")) return @"Гарант";
             return company;
         }
 
@@ -75,18 +74,18 @@ namespace Сerts
         /// <returns></returns>
         static string GetNameCertOwner(string certOwner)
         {
-            if (certOwner.Contains("Рыжов"))        return "Рыжов Алексей Владимирович";
-            if (certOwner.Contains("Баев"))         return "Баев Александр Николаевич";
-            if (certOwner.Contains("Синцов"))       return "Синцов Антон Александрович";
-            if (certOwner.Contains("Казацкий"))     return "Казацкий Константин Борисович";
-            if (certOwner.Contains("Верховский"))   return "Верховский Илья Владимирович";
-            if (certOwner.Contains("Штерман"))      return "Штерман Татьяна Викторовна";
-            if (certOwner.Contains("Ильина"))       return "Ильина Галина Игоревна";
-            if (certOwner.Contains("Захарченко"))   return "Захарченко Лидия Васильевна";
-            if (certOwner.Contains("Каравашкина"))  return "Каравашкина Елена Александровна";
-            if (certOwner.Contains("Мехрякова"))    return "Мехрякова Елена Сергеевна";
-            if (certOwner.Contains("Дегтерев"))     return "Дегтерев Григорий Александрович";
-            if (certOwner.Contains("Логинова"))     return "Логинова Яна Ильдаровна";
+            if (certOwner.Contains("Рыжов")) return "Рыжов Алексей Владимирович";
+            if (certOwner.Contains("Баев")) return "Баев Александр Николаевич";
+            if (certOwner.Contains("Синцов")) return "Синцов Антон Александрович";
+            if (certOwner.Contains("Казацкий")) return "Казацкий Константин Борисович";
+            if (certOwner.Contains("Верховский")) return "Верховский Илья Владимирович";
+            if (certOwner.Contains("Штерман")) return "Штерман Татьяна Викторовна";
+            if (certOwner.Contains("Ильина")) return "Ильина Галина Игоревна";
+            if (certOwner.Contains("Захарченко")) return "Захарченко Лидия Васильевна";
+            if (certOwner.Contains("Каравашкина")) return "Каравашкина Елена Александровна";
+            if (certOwner.Contains("Мехрякова")) return "Мехрякова Елена Сергеевна";
+            if (certOwner.Contains("Дегтерев")) return "Дегтерев Григорий Александрович";
+            if (certOwner.Contains("Логинова")) return "Логинова Яна Ильдаровна";
             return certOwner;
         }
     }

@@ -85,7 +85,8 @@
     <DelaySign>false</DelaySign>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>CertManager_2019.pfx</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="CryptoPro.Sharpei.Base, Version=1.0.0.10, Culture=neutral, PublicKeyToken=473b8c5086e795f5, processorArchitecture=MSIL" />
@@ -177,7 +178,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="CertManager_2019.pfx" />
     <EntityDeploy Include="ModelBaseCerts.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>ModelBaseCerts.Designer.cs</LastGenOutput>

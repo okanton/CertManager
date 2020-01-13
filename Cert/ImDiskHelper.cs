@@ -91,13 +91,13 @@ namespace Сerts
 
             try
             {
-                    foreach (var item in deviceList)
-                    {
-                        if (deviceID == item)
-                            deviceID++;
-                    }
-                    ImDiskAPI.CreateDevice(0, ImDiskFlags.DeviceTypeFD | ImDiskFlags.TypeVM, imagePath, false, driveLetter, ref deviceID);
-                    MessageBox.Show("Образ диска успешно смонтирован");
+                foreach (var item in deviceList)
+                {
+                    if (deviceID == item)
+                        deviceID++;
+                }
+                ImDiskAPI.CreateDevice(0, ImDiskFlags.DeviceTypeFD | ImDiskFlags.TypeVM, imagePath, false, driveLetter, ref deviceID);
+                MessageBox.Show("Образ диска успешно смонтирован");
             }
             catch (Exception ex)
             {
@@ -197,9 +197,9 @@ namespace Сerts
                 try
                 {
                     var diskData = LTR.IO.ImDisk.ImDiskAPI.QueryDevice(deviceNumber);
-                    deviceList.Add(diskData.DriveLetter+":\\ - " + "("+ diskData.Filename.Substring(4)+")");
+                    deviceList.Add(diskData.DriveLetter + ":\\ - " + "(" + diskData.Filename.Substring(4) + ")");
                 }
-                catch{}
+                catch { }
             }
             return deviceList;
         }

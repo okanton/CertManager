@@ -9,9 +9,6 @@
 
 namespace Сerts
 {
-    using System;
-    using System.Collections.Generic;
-    
     public partial class CertsUser
     {
         public int Id { get; set; }

@@ -60,7 +60,7 @@ namespace Сerts
             if (hProv != IntPtr.Zero)
                 Win32.CryptReleaseContext(hProv, 0);
 
-            return (containernames.Count == 0)?null: (string[])containernames.ToArray(Type.GetType("System.String"));
+            return (containernames.Count == 0) ? null : (string[])containernames.ToArray(Type.GetType("System.String"));
         }
 
         /// <summary>
@@ -97,9 +97,9 @@ namespace Сerts
             var store = new X509Store(StoreName.My, StoreLocation.CurrentUser);
             var cert = CryptoHelper.GetCertificate(providerType, providerName, containerName);
             store.Open(OpenFlags.ReadWrite);
-            cert.FriendlyName= NamesHelper.SetShortName(cert);
+            cert.FriendlyName = NamesHelper.SetShortName(cert);
             store.Add(cert);
-            
+
             store.Close();
         }
 
@@ -126,7 +126,7 @@ namespace Сerts
             }
             else MessageBox.Show("Сетевая папка с корневыми сертификатами недоступна", "Корневые сертификаты", MessageBoxButtons.OK);
         }
-        
+
         /// <summary>
         /// Проверка просроченных сертификатов АТС в контейнере MY текущего пользователя
         /// </summary>
@@ -139,8 +139,8 @@ namespace Сerts
             {
                 var dateCert = cert.NotBefore.Date.AddYears(1);
 
-                    if (dateCert.Date.CompareTo(DateTime.Now.Date) == -1) //
-                        List.Add(cert);
+                if (dateCert.Date.CompareTo(DateTime.Now.Date) == -1) //
+                    List.Add(cert);
             }
             if (List.Count != 0)
             {
@@ -164,7 +164,7 @@ namespace Сerts
             var certcoll = new X509Certificate2Collection();
             var store = new X509Store(StoreName.My, StoreLocation.CurrentUser);
             var myCertsList = new List<X509Certificate2>();
-            
+
             store.Open(OpenFlags.ReadWrite);
             certcoll = store.Certificates;
             store.Close();
@@ -172,7 +172,7 @@ namespace Сerts
             foreach (var cert in certcoll)
             {
                 var publisher = cert.Issuer;
-                if (publisher.Contains(publisherName1)|| publisher.Contains(publisherName2) || publisher.Contains(publisherName3))
+                if (publisher.Contains(publisherName1) || publisher.Contains(publisherName2) || publisher.Contains(publisherName3))
                     myCertsList.Add(cert);
             }
             return myCertsList;

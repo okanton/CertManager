@@ -17,7 +17,7 @@ namespace Сerts
             return diskManager;
         }
 
-        public static ToolStripItem [] GetMountedDisks()
+        public static ToolStripItem[] GetMountedDisks()
         {
             var md = ImDiskHelper.MountedDisks();
 
@@ -85,7 +85,7 @@ namespace Сerts
 
         private static void ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+
         }
     }
 }
