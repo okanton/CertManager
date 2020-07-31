@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
+using Сerts.Properties;
 
 namespace Сerts
 {
@@ -18,35 +19,37 @@ namespace Сerts
         private static void SetUpdatePath()
         {
             var c = (int)DataBaseHelper.ImageType();
+            var keyPath = Settings.Default.KeysPath;
+
             switch (c)
             {
                 case 1:
-                    UpdatePath = @"\\ies\prm\KEYS_TRADING\Keys_Disp.VFD";
+                    UpdatePath = Path.Combine(keyPath, "Keys_Disp.VFD");
                     Department = "управления диспетчеризации и режимов";
                     break;
 
                 case 2:
-                    UpdatePath = @"\\ies\prm\KEYS_TRADING\Keys_Ilina.VFD";
+                    UpdatePath = Path.Combine(keyPath, "Keys_Ilina.VFD");
                     Department = "управления сопровождения рынков";
                     break;
 
                 case 3:
-                    UpdatePath = @"\\ies\prm\KEYS_TRADING\Keys_Zaharchenko.VFD";
+                    UpdatePath = Path.Combine(keyPath, "Keys_Zaharchenko.VFD");
                     Department = "управления сопровождения рынков";
                     break;
 
                 case 4:
-                    UpdatePath = @"\\ies\prm\KEYS_TRADING\Keys_Karavashkina.VFD";
+                    UpdatePath = Path.Combine(keyPath, "Keys_Karavashkina.VFD");
                     Department = "управления сопровождения рынков";
                     break;
 
                 case 5:
-                    UpdatePath = @"\\ies\prm\KEYS_TRADING\Keys_Mehryakova.VFD";
+                    UpdatePath = Path.Combine(keyPath, "Keys_Mehryakova.VFD");
                     Department = "управления сопровождения рынков";
                     break;
 
                 case 6:
-                    UpdatePath = @"\\ies\prm\KEYS_TRADING\Keys_Sintcov.VFD";
+                    UpdatePath = Path.Combine(keyPath, "Keys_Sintcov.VFD");
                     Department = "управления торговых операций";
                     break;
 
